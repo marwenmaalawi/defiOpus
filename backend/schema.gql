@@ -1,0 +1,47 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Result {
+  id: ID!
+  created_at: String!
+  url: String!
+  username: String!
+  profile_image: String!
+  search: String!
+}
+
+type Search {
+  id: ID!
+  term: String!
+}
+
+type SearchCreateOutput {
+  search: Search!
+}
+
+type ResultCreateOutput {
+  result: Result!
+}
+
+type Query {
+  sayHello: String!
+  searchfind: [Search!]!
+}
+
+type Mutation {
+  SearchCreate(input: SearchCreateInput!): SearchCreateOutput!
+  ResultCreate(input: ResultCreateInput!): ResultCreateOutput!
+}
+
+input SearchCreateInput {
+  term: String!
+}
+
+input ResultCreateInput {
+  created_at: String!
+  url: String!
+  username: String!
+  profile_image: String!
+  search: String!
+}
